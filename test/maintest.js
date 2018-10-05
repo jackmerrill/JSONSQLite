@@ -3,4 +3,4 @@ jsql.newJSON('{ "test": "hello" }')
 
 jsql.setJSON(1, '{ "test": "hi" }')
 
-console.log(jsql.getJSON())
+console.log(jsql.getJSON(1))
