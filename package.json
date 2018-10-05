@@ -1,0 +1,12 @@
+{
+  "name": "jsonsqlite",
+  "version": "0.0.1",
+  "description": "JSON object to SQLite file.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Jack Merrill",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^4.0.2"
+  }
+}
