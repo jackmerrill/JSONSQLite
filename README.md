@@ -15,11 +15,16 @@ Using npm:
 ```
 # Example Script
 ```js
-  const jsql = require('jsonsqlite')
-  jsql.newJSON('{ "test": "hello" }')
-
-  jsql.setJSON(1, '{ "test": "hi" }')
-
+  const jsql = require('../index.js')
+  jsql.newJSON(function(err, cbt){
+      if (err) console.error(err)
+      console.log(cbt)
+  })
+  
+  jsql.setJSON(function(err, cbt){
+      if (err) console.error(err)
+      console.log(cbt)
+  })
   jsql.getJSON(function(err, data) {
       if (err) console.error(err)
       console.log(data.test)
