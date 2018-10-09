@@ -1,3 +1,4 @@
+
 # JSONSQLite
 
 JSONSQLite lets you store JSON data in a SQLite database.
@@ -39,3 +40,9 @@ If you are good with JSON, but not with SQLite, this is for you!
 # Issues or Questions
 If you have an issue or question about this module, make a new issue [here](https://github.com/yoshifan509/issues).
 
+# Current Known Bugs
+There are some currently known bugs, they are as followed:
+
+ - No table `jsondata` on first run
+
+They will be fixed alongside development.
