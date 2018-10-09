@@ -17,15 +17,11 @@ Using npm:
 # Example Script
 ```js
   const jsql = require('../index.js')
-  jsql.newJSON(function(err, cbt){
-      if (err) console.error(err)
-      console.log(cbt)
-  })
   
-  jsql.setJSON(function(err, cbt){
-      if (err) console.error(err)
-      console.log(cbt)
-  })
+  jsql.newJSON('{ "test": "hello" }')
+  
+  jsql.setJSON('{ "test": "hello" }')
+  
   jsql.getJSON(function(err, data) {
       if (err) console.error(err)
       console.log(data.test)
@@ -34,9 +30,6 @@ Using npm:
 
 This script can be tested in test/maintest.js. It should return this:
 ```
-  Success! Set NEW JSON data to { "test": "hello" }
-  Success! Set JSON data to { "test": "hi" } in row 1
-  undefined: { "test": "hi" }
   hi
 ```
 # Why JSONSQLite?
