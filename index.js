@@ -19,16 +19,17 @@ exports.setJSON = setJSON
 const newJSON = function newJSON(data) {
   var insert = db.prepare("INSERT INTO jsondata VALUES (?)")
   insert.run(data)
-  return console.log("Success! New JSON row with data: "+data)
+  return console.log("Success! Set NEW JSON data to "+data)
 }
 
 exports.newJSON = newJSON
 
-const getJSON = function getJSON(id) {
-  db.get("SELECT rowid AS id, data FROM jsondata", function(err, row) {
+const getJSON = function getJSON(callback) {
+  db.get("SELECT data FROM jsondata", function(err, row) {
     if (err) throw err
     console.log(row.id + ": " + row.data);
-    return row.data
+    var data = row.data
+    callback(null, JSON.parse(data))
   })
 }
 

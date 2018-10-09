@@ -3,4 +3,7 @@ jsql.newJSON('{ "test": "hello" }')
 
 jsql.setJSON(1, '{ "test": "hi" }')
 
-console.log(jsql.getJSON(1))
+jsql.getJSON(function(err, data) {
+    if (err) console.error(err)
+    console.log(data.test)
+})
